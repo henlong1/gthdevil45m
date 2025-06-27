@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가따후 시스템 & 악마의 바카라 예언자</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Gattahu System Section -->
+        <div class="app-container gattahu-container">
+            <h1>가따후 시스템</h1>
+            <div class="game-info">
+                <p>현재 레벨: <span id="gattahuCurrentLevel">3</span></p>
+                <p>현재 단계: <span id="gattahuCurrentStage">1</span></p>
+                <p>현재 베팅 유닛: <span id="gattahuCurrentBetUnit">3</span></p>
+                <p>총 유닛: <span id="gattahuTotalUnits">0</span></p>
+                <p id="gattahuMessage" class="message"></p>
+            </div>
+            <div class="controls">
+                <button id="gattahuWinButton" class="button win">승리</button>
+                <button id="gattahuLoseButton" class="button lose">패배</button>
+                <button id="gattahuResetButton" class="button reset">리셋</button>
+                <button id="gattahuUndoButton" class="button undo">이전 단계</button>
+            </div>
+            <div class="disclaimer">
+                <p>본 시스템의 이용으로 발생하는 모든 결과에 대한 법적·재정적 책임은 이용자 본인에게 있으며, 운영자는 일체의 법적 책임을 지지 않습니다.</p>
+            </div>
+        </div>
+
+        <!-- Baccarat Prophet Section -->
+        <div class="app-container baccarat-container">
+            <h1 class="baccarat-title">
+                <span class="baccarat-emoji">🧿</span> 악마의 바카라 예언자
+            </h1>
+
+            <div class="baccarat-display-area">
+                <p class="baccarat-label">🎲 악마의 조언 코드:</p>
+                <p id="baccaratDiceDisplay" class="baccarat-dice-text">아직 예언되지 않음</p>
+            </div>
+
+            <!-- Moved Baccarat Prophet '예언하기' button below the dice display area -->
+            <div class="baccarat-controls">
+                <button id="baccaratRollButton" class="baccarat-button baccarat-predict">
+                    예언하기
+                </button>
+            </div>
+
+            <div id="baccaratResultDisplay" class="baccarat-result">
+                <span class="baccarat-arrow">👉</span>
+            </div>
+
+            <div class="baccarat-counts-grid">
+                <div class="baccarat-count-box total">
+                    <div class="baccarat-count-label">총 예언 횟수:</div>
+                    <div id="baccaratTotalCount" class="baccarat-count-value">0</div>
+                </div>
+                <div class="baccarat-count-box summary">
+                    <div class="baccarat-count-label">결과 요약:</div>
+                    <div class="baccarat-summary-values">
+                        <span class="baccarat-banker-text">BANKER: <span id="baccaratBankerCount">0</span> (<span id="baccaratConsecutiveBanker">0</span> 연속)</span>
+                        <span class="baccarat-player-text">PLAYER: <span id="baccaratPlayerCount">0</span> (<span id="baccaratConsecutivePlayer">0</span> 연속)</span>
+                        <span class="baccarat-tie-text">TIE: <span id="baccaratTieCount">0</span> (<span id="baccaratConsecutiveTie">0</span> 연속)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="baccarat-footer-buttons">
+                <button id="baccaratUndoButton" class="baccarat-button baccarat-back">
+                    전 단계로
+                </button>
+                <button id="baccaratResetButton" class="baccarat-button baccarat-reset">
+                    리셋
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
